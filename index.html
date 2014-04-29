@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+    <div class="widget-panes">
+        <div class="pane-navi">
+            <div class="widget-navi">
+                <label title="Projects"><input type="radio" name="navi" value="project" checked><span class="icon icon-project"></span></label>
+                <label title="Tasks"><input type="radio" name="navi" value="task"><span class="icon icon-task"></span></label>
+                <label title="Watch"><input type="radio" name="navi" value="watch"><span class="icon icon-watch"></span></label>
+                <label title="Watch"><input type="radio" name="navi" value="console"><span class="icon icon-console"></span></label>
+                <label title="Settings"><input type="radio" name="navi" value="setting"><span class="icon icon-setting"></span></label>
+                
+            </div>
+        </div>
+        <div class="pane-main">
+            <div class="widget-pages animation">
+                <div class="page" id="project">
+                    <h1>プロジェクト</h1>
+                    <div class="widget-project-list"></div>
+                    <!-- /.widget-project-list -->
+                    <p>
+                        <button class="widget-button" data-role="addproject">
+                            <span class="icon icon-folder-open"></span>
+                            <span class="label">プロジェクトを新規追加</span>
+                            <input type="file" id="add-project-btn" webkitdirectory directory>
+                        </button>
+                        <button class="widget-button" data-rile="delproject">
+                            <span class="icon icon-delete"></span>
+                            <span class="label">プロジェクトを削除</span>
+                        </button>
+                    </p>
+                </div>
+                <!-- /#project.page -->
+                <div class="page" id="task">
+                    <h1><span class="project-name">My Project</span> のタスク</h1>
+                    <div class="widget-task-list">
+                        <label>
+                            <input type="radio" name="task" value="">
+                            <span class="label">
+                                less
+                                <span class="control">
+                                    <span class="icon icon-run"></span>
+                                </span>
+                            </span>
+                        </label>
+                        <label>
+                            <input type="radio" name="task" value="">
+                            <span class="label">
+                                connect
+                                <span class="control">
+                                    <span class="icon icon-run"></span>
+                                </span>
+                            </span>
+                        </label>
+                        <label>
+                            <input type="radio" name="task" value="">
+                            <span class="label">
+                                uglify
+                                <span class="control">
+                                    <span class="icon icon-run"></span>
+                                </span>
+                            </span>
+                        </label>
+                        <label>
+                            <input type="radio" name="task" value="">
+                            <span class="label">
+                                concat
+                                <span class="control">
+                                    <span class="icon icon-run"></span>
+                                </span>
+                            </span>
+                        </label>
+                        <label>
+                            <input type="radio" name="task" value="">
+                            <span class="label">
+                                mincss
+                                <span class="control">
+                                    <span class="icon icon-run"></span>
+                                </span>
+                            </span>
+                        </label>
+                        <label>
+                            <input type="radio" name="task" value="">
+                            <span class="label">
+                                less
+                                <span class="control">
+                                    <span class="icon icon-run"></span>
+                                </span>
+                            </span>
+                        </label>
+                    </div>
+                    <!-- /.widget-task-list -->
+                    <p>
+                        <button class="widget-button" data-role="addtask">
+                            <span class="icon icon-add"></span>
+                            <span class="label">タスクの追加</span>
+                        </button>
+                        <button class="widget-button" data-role="deltask">
+                            <span class="icon icon-delete"></span>
+                            <span class="label">タスクの削除</span>
+                        </button>
+                    </p>
+                    <hr>
+                    <h2>タスクの設定 : <span class="task-name">less</span></h2>
+                    <form class="widget-task-config">
+                        <fieldset>
+                            <div class="label">paths</div>
+                            <div class="content"><input type="text"></div>
+                        </fieldset>
+                        <fieldset>
+                            <div class="label">compress</div>
+                            <div class="content">
+                                <label><input type="radio" name="less-compress">true</label>
+                                <label><input type="radio" name="less-compress" checked>false</label>
+                            </div>
+                        </fieldset>
+                    </form>
+                    <!-- /.widget-task-config -->
+                </div>
+                <!-- /#task -->
+                <div class="page" id="watch">
+                    <h1>ウォッチ</h1>
+                    <div class="widget-watch-control">
+                        <button class="active"><span class="icon icon-run"></span></button>
+                        <button><span class="icon icon-stop"></span></button>
+                        <button><span class="icon icon-refresh"></span></button>
+                    </div>
+                    <!-- /.widget-watch-control -->
+                    <form class="widget-watch-list">
+                        <label><input type="checkbox"><span class="label"><span class="icon icon-check"></span>less</span></label>
+                        <label><input type="checkbox"><span class="label"><span class="icon icon-check"></span>uglify</span></label>
+                        <label><input type="checkbox"><span class="label"><span class="icon icon-check"></span>cssmin</span></label>
+                        <label><input type="checkbox"><span class="label"><span class="icon icon-check"></span>concat</span></label>
+                    </form>
+                    <!-- /.widget-watch-list -->
+                </div>
+                <!-- /#watch.page -->
+                <div class="page" id="console">
+                    <div class="widget-console">
+                        <pre class="console"></pre>
+                    </div>
+                    <!-- /.widget-console -->
+                </div>
+                <!-- /#console.page -->
+                <div class="page" id="setting">
+                    <h1>設定</h1>
+                </div>
+                <!-- /#setting.page -->
+            </div>
+        </div>
+    </div>
+
+<script type="text/plain" id="dummy-console">Done, without errors.
+Completed in 1.540s at Wed Nov 20 2013 18:08:27 GMT+0900 (JST) - Waiting...
+OK
+>> File "html/assets/less/module/icons.less" changed.
+
+Running "less:dev" (less) task
+File html/assets/css/style.css created.
+
+Done, without errors.
+Completed in 1.609s at Wed Nov 20 2013 18:15:35 GMT+0900 (JST) - Waiting...
+OK
+>> File "html/assets/less/module/icons.less" changed.
+
+Running "less:dev" (less) task
+File html/assets/css/style.css created.
+
+Done, without errors.
+Completed in 1.532s at Wed Nov 20 2013 18:19:21 GMT+0900 (JST) - Waiting...
+OK
+>> File "html/assets/less/module/icons.less" changed.
+
+Running "less:dev" (less) task
+File html/assets/css/style.css created.
+
+Done, without errors.
+Completed in 1.790s at Wed Nov 20 2013 18:19:55 GMT+0900 (JST) - Waiting...
+OK
+>> File "html/assets/less/module/icons.less" changed.
+
+Running "less:dev" (less) task
+File html/assets/css/style.css created.
+
+Done, without errors.
+Completed in 1.285s at Wed Nov 20 2013 18:20:48 GMT+0900 (JST) - Waiting...
+OK
+>> File "html/assets/less/module/icons.less" changed.
+
+Running "less:dev" (less) task
+File html/assets/css/style.css created.
+
+Done, without errors.
+Completed in 1.329s at Wed Nov 20 2013 18:23:55 GMT+0900 (JST) - Waiting...</script>
+
+<script src="assets/js/application.js"></script>
+
+</body>
+</html>

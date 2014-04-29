@@ -1,0 +1,41 @@
+
+.widget-list {
+
+    margin: 1em 0;
+    border: 2px solid #666;
+    border-radius: 3px;
+
+    label {
+        display: block;
+        border-top: 1px solid #555;
+
+        &:first-child {
+            border-top: none;
+        }
+    }
+    .label {
+        .font-size(13);
+        display: block;
+        background-color: #444;
+        padding: 0 1em;
+        line-height: 2em;
+        color: #999;
+
+        .control {
+            float: right;
+        }
+
+        &:hover {
+            background-color: #404040;
+            color: #ccc;
+        }
+    }
+    input[type=radio] {
+        display: none;
+    }
+    input:checked + .label {
+        background-color: #222;
+        color: #fff;
+    }
+
+}
